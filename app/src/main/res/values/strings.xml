@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">altoCampo</string>
     <string name="textoPrincipal">Ruta y experiencias durante todo el año</string>
-    <string name="idioma">idioma</string>
+    <string name="idioma">idioma: </string>
     <string name="tema">modo oscuro</string>
+    <string-array name="idiomasLista">
+        <item>Español</item>
+        <item>ingles</item>
+    </string-array>
 </resources>

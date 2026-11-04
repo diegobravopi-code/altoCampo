@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="letraInicio">#026335</color>
+    <color name="fondoMenu">#E3F4EA</color>
+    <color name="letraOpciones">#519087</color>
+    <color name="fondoBarraLateral">#FCFDFC</color>
 </resources>
