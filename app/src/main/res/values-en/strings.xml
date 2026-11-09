@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">altoCampo</string>
+    <string name="modoOscuro">dark mode: </string>
+    <string name="idioma">language: </string>
+    <string-array name="idiomasLista">
+        <item>Spanish</item>
+        <item>Ingles</item>
+    </string-array>
+</resources>
