@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">altoCampo</string>
-    <string name="textoPrincipal">Ruta y experiencias durante todo el año</string>
+    <string name="app_name">AltoCampoo</string>
     <string name="modo_oscuro">Modo oscuro</string>
     <string name="idioma">idioma:</string>
     <string-array name="idiomasLista">
