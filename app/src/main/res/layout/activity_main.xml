@@ -59,7 +59,7 @@
                 android:text="@string/idioma"/>
             <Spinner
                 android:id="@+id/idiomas"
-                android:layout_width="229dp"
+                android:layout_width="209dp"
                 android:layout_height="wrap_content"
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"

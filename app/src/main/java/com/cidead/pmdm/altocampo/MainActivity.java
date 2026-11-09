@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 
-import com.cidead.pmdm.altocampo.R;
-
 public class MainActivity extends AppCompatActivity {
 
     Switch swichModoOscuro;

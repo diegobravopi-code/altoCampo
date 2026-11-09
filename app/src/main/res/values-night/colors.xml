@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Para los colores modo nocturno/oscuro-->
+    <color name="fondo">#101814</color>
+    <color name="barra">#1B2720</color>
+    <color name="tarjeta">#1B2720</color>
+    <color name="texto">#FFFFFF</color>
+    <color name="borde">#3D6B53</color>
+
+</resources>
