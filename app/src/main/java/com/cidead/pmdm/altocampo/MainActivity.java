@@ -1,7 +1,5 @@
 package com.cidead.pmdm.altocampo;
 
-import static androidx.core.app.ActivityCompat.recreate;
-
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,9 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.os.LocaleListCompat;
-
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
