@@ -6,6 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,13 +31,27 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_gravity="clip_horizontal"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/border">
+
+            <ImageButton
+                android:id="@+id/hamburgesa"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/baseline_menu_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Botón de menú"
+                app:tint="@color/texto"
+                />
+
             <Switch
                 android:id="@+id/switchDarkMode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/modoOscuro"
-                tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                android:layout_marginEnd="16dp"
+                android:text="Modo oscuro"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                />
             <TextView
                 android:id="@+id/idioma"
                 android:layout_width="50dp"
@@ -51,5 +66,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"/>
+
+        <!-- El texto que muestra donde estamos (en ese caso en el inicio) -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/texto"
+            android:textStyle="bold"
+            android:text="Inicio" />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

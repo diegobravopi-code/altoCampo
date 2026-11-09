@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="letraInicio">#026335</color>
-    <color name="fondoMenu">#E3F4EA</color>
-    <color name="letraOpciones">#519087</color>
-    <color name="fondoBarraLateral">#FCFDFC</color>
+
+    <!-- Para los colores modo normal o por defecto-->
+
+    <color name="fondo">#E5F6EC</color>
+    <color name="barra">#CFE9DA</color>
+    <color name="tarjeta">#FFFFFF</color>
+    <color name="texto">#00623B</color>
+    <color name="borde">#000000</color>
 </resources>
