@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">altoCampo</string>
-    <string name="modoOscuro">dark mode: </string>
+    <string name="modo_oscuro">dark mode: </string>
     <string name="idioma">language: </string>
     <string-array name="idiomasLista">
         <item>Spanish</item>
         <item>Ingles</item>
+    </string-array>
+    <string-array name="opciones">
+        <item>Start</item>
+        <item>Routes</item>
+        <item>Gastronomy and km 0</item>
+        <item>Accommodation and services</item>
+        <item>Activities</item>
+        <item>SEO/BirdLife</item>
+        <item>Agenda</item>
+        <item>My saved</item>
+        <item>Settings and help</item>
     </string-array>
 </resources>

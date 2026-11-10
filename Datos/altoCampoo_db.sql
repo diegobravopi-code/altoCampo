@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS altoCampoo_db;
+CREATE DATABASE altoCampoo_db;
+USE altoCampoo_db;
 CREATE TABLE RUTA (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo_es VARCHAR(200) NOT NULL,

@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -16,11 +17,14 @@ import androidx.core.os.LocaleListCompat;
 public class MainActivity extends AppCompatActivity {
 
     Switch swichModoOscuro;
-    Spinner idiomas;
+    TextView texto;
+    Spinner idiomas, menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.inicio);
 
         SharedPreferences prefs = getSharedPreferences("ajustes", MODE_PRIVATE);
 
@@ -33,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
-        setContentView(R.layout.activity_main);
 
         // ---------------------------------
         // MODO OSCURO
@@ -109,6 +112,83 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+
+
+        // ---------------------------------
+        // IR ENTRE MENUS
+        // ---------------------------------
+
+
+
+        menu = findViewById(R.id.hamburgesa);
+
+
+
+        ArrayAdapter<CharSequence> adaptador =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.opciones,
+                        android.R.layout.simple_spinner_item
+                );
+
+        adaptador.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item
+        );
+
+
+        texto = findViewById(R.id.textView);
+        menu.setAdapter(adaptador);
+
+        menu.setOnItemSelectedListener(
+                new AdapterView.OnItemSelectedListener() {
+
+                    @Override
+                    public void onItemSelected(
+                            AdapterView<?> parent,
+                            View view,
+                            int position,
+                            long id) {
+
+                        switch (position) {
+                            case 0:
+                                //ir a inicio
+                                break;
+                            case 1:
+                                //ir a rutas
+                                break;
+                            case 2:
+                                //ir a gastronomia
+                                break;
+                            case 3:
+                                //ir a alojamiento
+                                break;
+                            case 4:
+                                //ir a actividades
+                                break;
+                            case 5:
+                                //ir a seo
+                                break;
+                            case 6:
+                                //ir a agenda
+                                break;
+                            case 7:
+                                //ir a guardado
+                                break;
+                            case 8:
+                                //ir a ajustes
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // No se ha seleccionado ningún idioma
+                    }
+                }
+        );
+
     }
 
     // ---------------------------------

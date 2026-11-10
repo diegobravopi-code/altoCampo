@@ -7,4 +7,15 @@
         <item>Español</item>
         <item>English</item>
     </string-array>
+    <string-array name="opciones">
+        <item>Inicio</item>
+        <item>Rutas</item>
+        <item>Gastronomía y km 0</item>
+        <item>Alojamiento y servicios</item>
+        <item>Actividades</item>
+        <item>SEO/BirdLife</item>
+        <item>Agenda</item>
+        <item>Mis guardados</item>
+        <item>Ajustes y ayuda</item>
+    </string-array>
 </resources>

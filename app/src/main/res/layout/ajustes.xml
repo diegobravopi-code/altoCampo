@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ajustes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="clip_horizontal"
+            tools:ignore="MissingConstraints">
+            <ImageView
+                android:id="@+id/imagenInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/alto_campo_logo"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="clip_horizontal"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/border">
+
+            <Spinner
+                android:id="@+id/hamburgesa"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:spinnerMode="dropdown"
+                android:src="@drawable/baseline_menu_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Botón de menú"
+                app:tint="@color/texto"
+                />
+
+            <Switch
+                android:id="@+id/switchDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/modo_oscuro"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                />
+            <TextView
+                android:id="@+id/idioma"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:text="@string/idioma"/>
+            <Spinner
+                android:id="@+id/idiomas"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"/>
+
+        <!-- El texto que muestra donde estamos (en ese caso en alojamiento) -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/texto"
+            android:textStyle="bold"
+            android:text="ajustes" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
