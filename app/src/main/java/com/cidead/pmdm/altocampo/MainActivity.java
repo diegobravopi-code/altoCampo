@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // ---------------------------------
-        // IR ENTRE MENUS
+        // IR ENTRE MENUS(aun hay que hacer que funcione)
         // ---------------------------------
 
 
