@@ -6,13 +6,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -122,10 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        menu = findViewById(R.id.hamburgesa);
-
-
-
+        /*menu = findViewById(R.id.hamburgesa);
         ArrayAdapter<CharSequence> adaptador =
                 ArrayAdapter.createFromResource(
                         this,
@@ -187,7 +189,47 @@ public class MainActivity extends AppCompatActivity {
                         // No se ha seleccionado ningún idioma
                     }
                 }
+        );*/
+
+
+
+
+        ImageView imageView = findViewById(R.id.imageViewTrigger);
+        Spinner spinner = findViewById(R.id.mySpinner);
+
+        // 2. Definir los datos que contendrá el Spinner
+        List<String> opciones = Arrays.asList("Opción 1", "Opción 2", "Opción 3");
+
+        // 3. Crear y asignar el adaptador
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                opciones
         );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        // 4. Configurar qué sucede cuando el usuario selecciona una opción
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String elementoSeleccionado = opciones.get(position);
+                Toast.makeText(MainActivity.this, "Elegiste: " + elementoSeleccionado, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Opcional: acciones si no hay nada seleccionado
+            }
+        });
+
+        // 5. ¡Magia! Hacer que al hacer clic en la ImageView se abra el Spinner
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spinner.performClick();
+            }
+        });
 
     }
 
