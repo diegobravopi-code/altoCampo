@@ -18,4 +18,13 @@
         <item>Mis guardados</item>
         <item>Ajustes y ayuda</item>
     </string-array>
+
+    <string-array name="array_tamanos">
+        <item>Pequeño</item>
+        <item>Normal</item>
+        <item>Grande</item>
+    </string-array>
+
+
+
 </resources>
