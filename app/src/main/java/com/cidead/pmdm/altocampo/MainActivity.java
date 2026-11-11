@@ -22,8 +22,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     Switch swichModoOscuro;
-    TextView texto;
-    Spinner idiomas, menu;
+    Spinner idiomas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,74 +125,6 @@ public class MainActivity extends AppCompatActivity {
         // ---------------------------------
 
 
-
-        /*menu = findViewById(R.id.hamburgesa);
-        ArrayAdapter<CharSequence> adaptador =
-                ArrayAdapter.createFromResource(
-                        this,
-                        R.array.opciones,
-                        android.R.layout.simple_spinner_item
-                );
-
-        adaptador.setDropDownViewResource(
-                android.R.layout.simple_spinner_dropdown_item
-        );
-
-
-        texto = findViewById(R.id.textView);
-        menu.setAdapter(adaptador);
-
-        menu.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-
-                    @Override
-                    public void onItemSelected(
-                            AdapterView<?> parent,
-                            View view,
-                            int position,
-                            long id) {
-
-                        switch (position) {
-                            case 0:
-                                //ir a inicio
-                                break;
-                            case 1:
-                                //ir a rutas
-                                break;
-                            case 2:
-                                //ir a gastronomia
-                                break;
-                            case 3:
-                                //ir a alojamiento
-                                break;
-                            case 4:
-                                //ir a actividades
-                                break;
-                            case 5:
-                                //ir a seo
-                                break;
-                            case 6:
-                                //ir a agenda
-                                break;
-                            case 7:
-                                //ir a guardado
-                                break;
-                            case 8:
-                                //ir a ajustes
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-                        // No se ha seleccionado ningún idioma
-                    }
-                }
-        );*/
-
-
-
-
         ImageView imageView = findViewById(R.id.imageViewTrigger);
         Spinner spinner = findViewById(R.id.mySpinner);
 
@@ -213,8 +144,46 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String elementoSeleccionado = opciones.get(position);
-                Toast.makeText(MainActivity.this, "Elegiste: " + elementoSeleccionado, Toast.LENGTH_SHORT).show();
+
+                switch (position) {
+                    case 0:
+                        //ir a inicio
+                        Toast.makeText(MainActivity.this, "Elegiste: inicio", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        //ir a rutas
+                        Toast.makeText(MainActivity.this, "Elegiste: rutas", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        //ir a gastronomia
+                        Toast.makeText(MainActivity.this, "Elegiste: gastronomia", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        //ir a alojamiento
+                        Toast.makeText(MainActivity.this, "Elegiste: alojamiento", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 4:
+                        //ir a actividades
+                        Toast.makeText(MainActivity.this, "Elegiste: actividades", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 5:
+                        //ir a seo
+                        Toast.makeText(MainActivity.this, "Elegiste: seo", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 6:
+                        //ir a agenda
+                        Toast.makeText(MainActivity.this, "Elegiste: agenda", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 7:
+                        //ir a guardado
+                        Toast.makeText(MainActivity.this, "Elegiste: guardado" , Toast.LENGTH_SHORT).show();
+                        break;
+                    case 8:
+                        //ir a ajustes
+                        Toast.makeText(MainActivity.this, "Elegiste: ajustes" , Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
             }
 
             @Override
