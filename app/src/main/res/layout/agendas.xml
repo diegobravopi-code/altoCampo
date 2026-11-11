@@ -34,25 +34,39 @@
             tools:ignore="MissingConstraints"
             android:background="@drawable/border">
 
-            <Spinner
-                android:id="@+id/hamburgesa"
+
+
+            <ImageView
+                android:id="@+id/imageViewTrigger"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:spinnerMode="dropdown"
                 android:src="@drawable/baseline_menu_24"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Botón de menú"
-                app:tint="@color/texto"
-                />
+                android:contentDescription="Abrir menú"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
 
-            <Switch
-                android:id="@+id/switchDarkMode"
+            <!-- El Spinner que contendrá las opciones -->
+
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:text="@string/modo_oscuro"
-                tools:ignore="UseSwitchCompatOrMaterialXml"
-                />
+                android:layout_height="wrap_content">
+                <Switch
+                    android:id="@+id/switchDarkMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/modo_oscuro"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"
+                    />
+                <Spinner
+                    android:id="@+id/mySpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible" />
+
+
+            </FrameLayout>
             <TextView
                 android:id="@+id/idioma"
                 android:layout_width="70dp"
