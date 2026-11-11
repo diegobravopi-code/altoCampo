@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinner = findViewById(R.id.mySpinner);
 
         // 2. Definir los datos que contendrá el Spinner
-        List<String> opciones = Arrays.asList("Opción 1", "Opción 2", "Opción 3");
+        List<String> opciones = Arrays.asList(getResources().getStringArray(R.array.opciones));
 
         // 3. Crear y asignar el adaptador
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
