@@ -1,0 +1,5 @@
+http://localhost:8080/api/rutas/1
+http://localhost:8080/api/rutas/1?idioma=en
+http://localhost:8080/api/rutas/999
+http://localhost:8080/api/rutas/1?idioma=fr
+
