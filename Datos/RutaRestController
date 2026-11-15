@@ -1,0 +1,41 @@
+package com.example.Controller_api.Controlador;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api/rutas")
+public class RutaRestController {
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Map<String, Object>> obtener(
+            @PathVariable("id") long id,
+            @RequestParam(name = "idioma", defaultValue = "es") String idioma) {
+
+        // Idioma no admitido -> HTTP 400
+        if (!idioma.equals("es") && !idioma.equals("en")) {
+            return ResponseEntity.badRequest().build();
+        }
+
+        // ID inexistente -> HTTP 404
+        if (id != 1) {
+            return ResponseEntity.notFound().build();
+        }
+
+        String titulo = idioma.equals("en") ? "Sample route" : "Ruta de prueba";
+
+        // Todo correcto -> HTTP 200 con el JSON
+        return ResponseEntity.ok(Map.of(
+                "id", id,
+                "titulo", titulo,
+                "distanciaKm", 1.5,
+                "idioma", idioma
+        ));
+    }
+}
