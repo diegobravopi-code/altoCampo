@@ -1,0 +1,20 @@
+## Ejemplo de respuesta 200 (`idioma=es`)
+
+```json
+{
+  "id": 1,
+  "titulo": "Ruta de prueba",
+  "distanciaKm": 1.5,
+  "idioma": "es"
+}
+```
+
+## Ejemplo de respuesta 200 (`idioma=en`)
+
+```json
+{
+  "id": 1,
+  "titulo": "Sample route",
+  "distanciaKm": 1.5,
+  "idioma": "en"
+}
