@@ -148,39 +148,39 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         //ir a inicio
-                        Toast.makeText(MainActivity.this, "Elegiste: inicio", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
                         //ir a rutas
-                        Toast.makeText(MainActivity.this, "Elegiste: rutas", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
                         //ir a gastronomia
-                        Toast.makeText(MainActivity.this, "Elegiste: gastronomia", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 3:
                         //ir a alojamiento
-                        Toast.makeText(MainActivity.this, "Elegiste: alojamiento", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 4:
                         //ir a actividades
-                        Toast.makeText(MainActivity.this, "Elegiste: actividades", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 5:
                         //ir a seo
-                        Toast.makeText(MainActivity.this, "Elegiste: seo", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 6:
                         //ir a agenda
-                        Toast.makeText(MainActivity.this, "Elegiste: agenda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
                         break;
                     case 7:
                         //ir a guardado
-                        Toast.makeText(MainActivity.this, "Elegiste: guardado" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position) , Toast.LENGTH_SHORT).show();
                         break;
                     case 8:
                         //ir a ajustes
-                        Toast.makeText(MainActivity.this, "Elegiste: ajustes" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position) , Toast.LENGTH_SHORT).show();
                         break;
                 }
 

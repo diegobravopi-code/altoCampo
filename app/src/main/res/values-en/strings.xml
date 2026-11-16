@@ -18,6 +18,9 @@
         <item>My saved</item>
         <item>Settings and help</item>
     </string-array>
-
-
+    <string-array name="array_tamanos">
+        <item>small</item>
+        <item>Normal</item>
+        <item>big</item>
+    </string-array>
 </resources>
