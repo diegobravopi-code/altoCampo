@@ -1,15 +1,14 @@
 package com.cidead.pmdm.altocampo;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,10 +19,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     Switch swichModoOscuro;
     Spinner idiomas;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,21 +49,18 @@ public class MainActivity extends AppCompatActivity {
         swichModoOscuro.setChecked(modoOscuro);
 
         swichModoOscuro.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                (buttonView, isChecked) -> {
 
-                        prefs.edit().putBoolean("modo_oscuro", isChecked).apply();
+                    prefs.edit().putBoolean("modo_oscuro", isChecked).apply();
 
-                        if (isChecked) {
-                            AppCompatDelegate.setDefaultNightMode(
-                                    AppCompatDelegate.MODE_NIGHT_YES
-                            );
-                        } else {
-                            AppCompatDelegate.setDefaultNightMode(
-                                    AppCompatDelegate.MODE_NIGHT_NO
-                            );
-                        }
+                    if (isChecked) {
+                        AppCompatDelegate.setDefaultNightMode(
+                                AppCompatDelegate.MODE_NIGHT_YES
+                        );
+                    } else {
+                        AppCompatDelegate.setDefaultNightMode(
+                                AppCompatDelegate.MODE_NIGHT_NO
+                        );
                     }
                 }
         );
@@ -91,47 +86,31 @@ public class MainActivity extends AppCompatActivity {
 
         idiomas.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
-
                     @Override
-                    public void onItemSelected(
-                            AdapterView<?> parent,
-                            View view,
-                            int position,
-                            long id) {
-
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         switch (position) {
                             case 0:
                                 cambiarIdioma("es");
                                 break;
-
                             case 1:
                                 cambiarIdioma("en");
                                 break;
                         }
                     }
-
                     @Override
                     public void onNothingSelected(AdapterView<?> parent) {
                         // No se ha seleccionado ningún idioma
                     }
                 }
         );
-
-
-
-
         // ---------------------------------
         // IR ENTRE MENUS(aun hay que hacer que funcione)
         // ---------------------------------
-
-
         ImageView imageView = findViewById(R.id.imageViewTrigger);
         Spinner spinner = findViewById(R.id.mySpinner);
-
-        // 2. Definir los datos que contendrá el Spinner
+        //Definir los datos que contendrá el Spinner
         List<String> opciones = Arrays.asList(getResources().getStringArray(R.array.opciones));
-
-        // 3. Crear y asignar el adaptador
+        //Crear y asignar el adaptador
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
@@ -139,12 +118,10 @@ public class MainActivity extends AppCompatActivity {
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-        // 4. Configurar qué sucede cuando el usuario selecciona una opción
+        //Configurar qué sucede cuando el usuario selecciona una opción
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
                 switch (position) {
                     case 0:
                         //ir a inicio
@@ -183,33 +160,21 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Elegiste: " + adapter.getItem(position) , Toast.LENGTH_SHORT).show();
                         break;
                 }
-
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Opcional: acciones si no hay nada seleccionado
             }
         });
-
-        // 5. ¡Magia! Hacer que al hacer clic en la ImageView se abra el Spinner
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinner.performClick();
-            }
-        });
+        //Hacer que al hacer clic en la ImageView se abra el Spinner
+        imageView.setOnClickListener(v -> spinner.performClick());
 
     }
-
     // ---------------------------------
     // CAMBIAR IDIOMA
     // ---------------------------------
-
     public void cambiarIdioma(String codigoIdioma) {
-
         LocaleListCompat locales = LocaleListCompat.forLanguageTags(codigoIdioma);
-
         AppCompatDelegate.setApplicationLocales(locales);
     }
 }
