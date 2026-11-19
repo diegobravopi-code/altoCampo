@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">altoCampo</string>
-    <string name="modo_oscuro">dark mode: </string>
-    <string name="idioma">language: </string>
+    <string name="app_name">AltoCampoo</string>
+    <string name="modo_oscuro">Dark mode</string>
+    <string name="idioma">Language:</string>
     <string-array name="idiomasLista">
-        <item>Spanish</item>
-        <item>Ingles</item>
+        <item>Español</item>
+        <item>English</item>
     </string-array>
     <string-array name="opciones">
-        <item>Start</item>
+        <item>Home</item>
         <item>Routes</item>
         <item>Gastronomy and km 0</item>
         <item>Accommodation and services</item>
@@ -19,8 +19,19 @@
         <item>Settings and help</item>
     </string-array>
     <string-array name="array_tamanos">
-        <item>small</item>
+        <item>Small</item>
         <item>Normal</item>
-        <item>big</item>
+        <item>Large</item>
     </string-array>
+
+    <string name="cargando">Loading…</string>
+    <string name="error_carga">The route could not be loaded.</string>
+    <string name="reintentar">Retry</string>
+    <string name="distancia_km">%.1f km</string>
+
+    <string name="abrir_menu">Open menu</string>
+    <string name="titulo_inicio">Home</string>
+    <string name="probar_ficha">Try route card</string>
+    <string name="elegiste">You chose: %1$s</string>
+    <string name="logo_desc">Alto Campoo logo</string>
 </resources>

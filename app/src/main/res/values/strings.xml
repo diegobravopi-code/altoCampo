@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">AltoCampoo</string>
     <string name="modo_oscuro">Modo oscuro</string>
-    <string name="idioma">idioma:</string>
+    <string name="idioma">Idioma:</string>
     <string-array name="idiomasLista">
         <item>Español</item>
         <item>English</item>
@@ -25,6 +25,14 @@
         <item>Grande</item>
     </string-array>
 
+    <string name="cargando">Cargando…</string>
+    <string name="error_carga">No se pudo cargar la ruta.</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="distancia_km">%.1f km</string>
 
-
+    <string name="abrir_menu">Abrir menú</string>
+    <string name="titulo_inicio">Inicio</string>
+    <string name="probar_ficha">Probar ficha</string>
+    <string name="elegiste">Elegiste: %1$s</string>
+    <string name="logo_desc">Logotipo de Alto Campoo</string>
 </resources>
